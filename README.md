@@ -6,8 +6,8 @@ Moved two classes out of dbModels.py file into their own file (post_dbModels.py)
 
 Created a base class and modified the other two classes:
   - created new class named Post
-  - renamed User_Posts to Topic
-  - renamed Post_Replies to Reply
+  - renamed class User_Posts to class Topic
+  - renamed class Post_Replies to class Reply
 
 Added the imports [below] from dbModels.py to post_dbModels.py, but not sure if that is necessary:
 
