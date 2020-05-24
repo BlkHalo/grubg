@@ -30,6 +30,9 @@ from myproject.post_dbmodels import Topic, Reply
 
 Now getting error: "Can't place __table_args__ on an inherited class "
 
+From Heroku logs: 
+sqlalchemy.exc.ArgumentError: Can't place __table_args__ on an inherited class with no table.
+
 Found the following on stackoverflow but I am not sure if it's related ...:
 https://stackoverflow.com/questions/43832848/cant-define-table-args-on-a-child-class-in-a-single-table-inheritance-setup
 
