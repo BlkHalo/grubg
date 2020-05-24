@@ -19,4 +19,18 @@ from flask_login import UserMixin
 
 Looked around the rest of the files in the repo and was not able to determine if the class name changes (Topic, Reply) would cause any issues. 
 
+--update
+modified basic.py
+from:
+from myproject.dbModels import User_Accounts, Recipe_Calories, User_Posts, Post_Replies
+
+to: 
+from myproject.dbModels import User_Accounts, Recipe_Calories
+from myproject.post_dbmodels import Topic, Reply
+
+Now getting error: "Can't place __table_args__ on an inherited class "
+
+
+
+
 
