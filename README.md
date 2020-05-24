@@ -33,6 +33,10 @@ Now getting error: "Can't place __table_args__ on an inherited class "
 Found the following on stackoverflow but I am not sure if it's related ...:
 https://stackoverflow.com/questions/43832848/cant-define-table-args-on-a-child-class-in-a-single-table-inheritance-setup
 
+https://issue.life/questions/43832848
+
+https://docs.sqlalchemy.org/en/13/orm/extensions/declarative/mixins.html
+
 
 
 
