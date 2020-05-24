@@ -43,6 +43,12 @@ https://docs.sqlalchemy.org/en/13/orm/extensions/declarative/mixins.html
 https://stackoverflow.com/questions/27211361/sqlalchemy-declarative-inheritance-of-table-args
 
 
+Mapping Class Inheritance Hierarchies
+https://docs.sqlalchemy.org/en/13/orm/inheritance.html
+
+
+
+
 
 
 
