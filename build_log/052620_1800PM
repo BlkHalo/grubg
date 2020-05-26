@@ -1,0 +1,113 @@
+
+
+
+
+2020-05-26T22:51:31.000000+00:00 app[api]: Build started by user smithkaylar@icloud.com
+2020-05-26T22:52:00.496400+00:00 heroku[web.1]: State changed from crashed to starting
+2020-05-26T22:52:00.323920+00:00 app[api]: Deploy ee944746 by user smithkaylar@icloud.com
+2020-05-26T22:52:00.323920+00:00 app[api]: Release v25 created by user smithkaylar@icloud.com
+2020-05-26T22:52:09.000000+00:00 app[api]: Build succeeded
+2020-05-26T22:52:10.051885+00:00 heroku[web.1]: State changed from starting to up
+2020-05-26T22:52:09.587974+00:00 app[web.1]: [2020-05-26 22:52:09 +0000] [4] [INFO] Starting gunicorn 20.0.4
+2020-05-26T22:52:09.588856+00:00 app[web.1]: [2020-05-26 22:52:09 +0000] [4] [INFO] Listening at: http://0.0.0.0:26837 (4)
+2020-05-26T22:52:09.589050+00:00 app[web.1]: [2020-05-26 22:52:09 +0000] [4] [INFO] Using worker: sync
+2020-05-26T22:52:09.593993+00:00 app[web.1]: [2020-05-26 22:52:09 +0000] [10] [INFO] Booting worker with pid: 10
+2020-05-26T22:52:09.682259+00:00 app[web.1]: [2020-05-26 22:52:09 +0000] [11] [INFO] Booting worker with pid: 11
+2020-05-26T22:52:11.353483+00:00 app[web.1]: [2020-05-26 22:52:11 +0000] [11] [ERROR] Exception in worker process
+2020-05-26T22:52:11.353521+00:00 app[web.1]: Traceback (most recent call last):
+2020-05-26T22:52:11.353522+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.6/site-packages/gunicorn/arbiter.py", line 583, in spawn_worker
+2020-05-26T22:52:11.353523+00:00 app[web.1]: worker.init_process()
+2020-05-26T22:52:11.353523+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.6/site-packages/gunicorn/workers/base.py", line 119, in init_process
+2020-05-26T22:52:11.353525+00:00 app[web.1]: self.load_wsgi()
+2020-05-26T22:52:11.353525+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.6/site-packages/gunicorn/workers/base.py", line 144, in load_wsgi
+2020-05-26T22:52:11.353525+00:00 app[web.1]: self.wsgi = self.app.wsgi()
+2020-05-26T22:52:11.353526+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.6/site-packages/gunicorn/app/base.py", line 67, in wsgi
+2020-05-26T22:52:11.353526+00:00 app[web.1]: self.callable = self.load()
+2020-05-26T22:52:11.353526+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.6/site-packages/gunicorn/app/wsgiapp.py", line 49, in load
+2020-05-26T22:52:11.353527+00:00 app[web.1]: return self.load_wsgiapp()
+2020-05-26T22:52:11.353527+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.6/site-packages/gunicorn/app/wsgiapp.py", line 39, in load_wsgiapp
+2020-05-26T22:52:11.353527+00:00 app[web.1]: return util.import_app(self.app_uri)
+2020-05-26T22:52:11.353528+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.6/site-packages/gunicorn/util.py", line 358, in import_app
+2020-05-26T22:52:11.353528+00:00 app[web.1]: mod = importlib.import_module(module)
+2020-05-26T22:52:11.353528+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.6/importlib/__init__.py", line 126, in import_module
+2020-05-26T22:52:11.353529+00:00 app[web.1]: return _bootstrap._gcd_import(name[level:], package, level)
+2020-05-26T22:52:11.353529+00:00 app[web.1]: File "<frozen importlib._bootstrap>", line 994, in _gcd_import
+2020-05-26T22:52:11.353530+00:00 app[web.1]: File "<frozen importlib._bootstrap>", line 971, in _find_and_load
+2020-05-26T22:52:11.353530+00:00 app[web.1]: File "<frozen importlib._bootstrap>", line 955, in _find_and_load_unlocked
+2020-05-26T22:52:11.353533+00:00 app[web.1]: File "<frozen importlib._bootstrap>", line 665, in _load_unlocked
+2020-05-26T22:52:11.353533+00:00 app[web.1]: File "<frozen importlib._bootstrap_external>", line 678, in exec_module
+2020-05-26T22:52:11.353534+00:00 app[web.1]: File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+2020-05-26T22:52:11.353534+00:00 app[web.1]: File "/app/basic.py", line 5, in <module>
+2020-05-26T22:52:11.353534+00:00 app[web.1]: from myproject.post_dbmodels import Topic, Reply
+2020-05-26T22:52:11.353535+00:00 app[web.1]: File "/app/myproject/post_dbmodels.py", line 22, in <module>
+2020-05-26T22:52:11.353535+00:00 app[web.1]: class Topic(Post):
+2020-05-26T22:52:11.353535+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.6/site-packages/flask_sqlalchemy/model.py", line 67, in __init__
+2020-05-26T22:52:11.353536+00:00 app[web.1]: super(NameMetaMixin, cls).__init__(name, bases, d)
+2020-05-26T22:52:11.353536+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.6/site-packages/flask_sqlalchemy/model.py", line 121, in __init__
+2020-05-26T22:52:11.353536+00:00 app[web.1]: super(BindMetaMixin, cls).__init__(name, bases, d)
+2020-05-26T22:52:11.353537+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.6/site-packages/sqlalchemy/ext/declarative/api.py", line 75, in __init__
+2020-05-26T22:52:11.353537+00:00 app[web.1]: _as_declarative(cls, classname, cls.__dict__)
+2020-05-26T22:52:11.353538+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.6/site-packages/sqlalchemy/ext/declarative/base.py", line 131, in _as_declarative
+2020-05-26T22:52:11.353538+00:00 app[web.1]: _MapperConfig.setup_mapping(cls, classname, dict_)
+2020-05-26T22:52:11.353538+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.6/site-packages/sqlalchemy/ext/declarative/base.py", line 160, in setup_mapping
+2020-05-26T22:52:11.353539+00:00 app[web.1]: cfg_cls(cls_, classname, dict_)
+2020-05-26T22:52:11.353539+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.6/site-packages/sqlalchemy/ext/declarative/base.py", line 180, in __init__
+2020-05-26T22:52:11.353539+00:00 app[web.1]: self._scan_attributes()
+2020-05-26T22:52:11.353540+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.6/site-packages/sqlalchemy/ext/declarative/base.py", line 232, in _scan_attributes
+2020-05-26T22:52:11.353540+00:00 app[web.1]: self._produce_column_copies(base)
+2020-05-26T22:52:11.353541+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.6/site-packages/sqlalchemy/ext/declarative/base.py", line 378, in _produce_column_copies
+2020-05-26T22:52:11.353541+00:00 app[web.1]: "Columns with foreign keys to other columns "
+2020-05-26T22:52:11.353550+00:00 app[web.1]: sqlalchemy.exc.InvalidRequestError: Columns with foreign keys to other columns must be declared as @declared_attr callables on declarative mixin classes.
+2020-05-26T22:52:11.353852+00:00 app[web.1]: [2020-05-26 22:52:11 +0000] [11] [INFO] Worker exiting (pid: 11)
+2020-05-26T22:52:11.361501+00:00 app[web.1]: [2020-05-26 22:52:11 +0000] [10] [ERROR] Exception in worker process
+2020-05-26T22:52:11.361503+00:00 app[web.1]: Traceback (most recent call last):
+2020-05-26T22:52:11.361504+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.6/site-packages/gunicorn/arbiter.py", line 583, in spawn_worker
+2020-05-26T22:52:11.361505+00:00 app[web.1]: worker.init_process()
+2020-05-26T22:52:11.361505+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.6/site-packages/gunicorn/workers/base.py", line 119, in init_process
+2020-05-26T22:52:11.361506+00:00 app[web.1]: self.load_wsgi()
+2020-05-26T22:52:11.361506+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.6/site-packages/gunicorn/workers/base.py", line 144, in load_wsgi
+2020-05-26T22:52:11.361506+00:00 app[web.1]: self.wsgi = self.app.wsgi()
+2020-05-26T22:52:11.361507+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.6/site-packages/gunicorn/app/base.py", line 67, in wsgi
+2020-05-26T22:52:11.361507+00:00 app[web.1]: self.callable = self.load()
+2020-05-26T22:52:11.361508+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.6/site-packages/gunicorn/app/wsgiapp.py", line 49, in load
+2020-05-26T22:52:11.361508+00:00 app[web.1]: return self.load_wsgiapp()
+2020-05-26T22:52:11.361508+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.6/site-packages/gunicorn/app/wsgiapp.py", line 39, in load_wsgiapp
+2020-05-26T22:52:11.361509+00:00 app[web.1]: return util.import_app(self.app_uri)
+2020-05-26T22:52:11.361509+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.6/site-packages/gunicorn/util.py", line 358, in import_app
+2020-05-26T22:52:11.361510+00:00 app[web.1]: mod = importlib.import_module(module)
+2020-05-26T22:52:11.361510+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.6/importlib/__init__.py", line 126, in import_module
+2020-05-26T22:52:11.361511+00:00 app[web.1]: return _bootstrap._gcd_import(name[level:], package, level)
+2020-05-26T22:52:11.361511+00:00 app[web.1]: File "<frozen importlib._bootstrap>", line 994, in _gcd_import
+2020-05-26T22:52:11.361512+00:00 app[web.1]: File "<frozen importlib._bootstrap>", line 971, in _find_and_load
+2020-05-26T22:52:11.361512+00:00 app[web.1]: File "<frozen importlib._bootstrap>", line 955, in _find_and_load_unlocked
+2020-05-26T22:52:11.361512+00:00 app[web.1]: File "<frozen importlib._bootstrap>", line 665, in _load_unlocked
+2020-05-26T22:52:11.361513+00:00 app[web.1]: File "<frozen importlib._bootstrap_external>", line 678, in exec_module
+2020-05-26T22:52:11.361513+00:00 app[web.1]: File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+2020-05-26T22:52:11.361514+00:00 app[web.1]: File "/app/basic.py", line 5, in <module>
+2020-05-26T22:52:11.361514+00:00 app[web.1]: from myproject.post_dbmodels import Topic, Reply
+2020-05-26T22:52:11.361514+00:00 app[web.1]: File "/app/myproject/post_dbmodels.py", line 22, in <module>
+2020-05-26T22:52:11.361515+00:00 app[web.1]: class Topic(Post):
+2020-05-26T22:52:11.361515+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.6/site-packages/flask_sqlalchemy/model.py", line 67, in __init__
+2020-05-26T22:52:11.361516+00:00 app[web.1]: super(NameMetaMixin, cls).__init__(name, bases, d)
+2020-05-26T22:52:11.361516+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.6/site-packages/flask_sqlalchemy/model.py", line 121, in __init__
+2020-05-26T22:52:11.361517+00:00 app[web.1]: super(BindMetaMixin, cls).__init__(name, bases, d)
+2020-05-26T22:52:11.361517+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.6/site-packages/sqlalchemy/ext/declarative/api.py", line 75, in __init__
+2020-05-26T22:52:11.361518+00:00 app[web.1]: _as_declarative(cls, classname, cls.__dict__)
+2020-05-26T22:52:11.361518+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.6/site-packages/sqlalchemy/ext/declarative/base.py", line 131, in _as_declarative
+2020-05-26T22:52:11.361518+00:00 app[web.1]: _MapperConfig.setup_mapping(cls, classname, dict_)
+2020-05-26T22:52:11.361519+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.6/site-packages/sqlalchemy/ext/declarative/base.py", line 160, in setup_mapping
+2020-05-26T22:52:11.361519+00:00 app[web.1]: cfg_cls(cls_, classname, dict_)
+2020-05-26T22:52:11.361520+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.6/site-packages/sqlalchemy/ext/declarative/base.py", line 180, in __init__
+2020-05-26T22:52:11.361520+00:00 app[web.1]: self._scan_attributes()
+2020-05-26T22:52:11.361529+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.6/site-packages/sqlalchemy/ext/declarative/base.py", line 232, in _scan_attributes
+2020-05-26T22:52:11.361530+00:00 app[web.1]: self._produce_column_copies(base)
+2020-05-26T22:52:11.361531+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.6/site-packages/sqlalchemy/ext/declarative/base.py", line 378, in _produce_column_copies
+2020-05-26T22:52:11.361531+00:00 app[web.1]: "Columns with foreign keys to other columns "
+2020-05-26T22:52:11.361537+00:00 app[web.1]: sqlalchemy.exc.InvalidRequestError: Columns with foreign keys to other columns must be declared as @declared_attr callables on declarative mixin classes.
+2020-05-26T22:52:11.362155+00:00 app[web.1]: [2020-05-26 22:52:11 +0000] [10] [INFO] Worker exiting (pid: 10)
+2020-05-26T22:52:11.540699+00:00 app[web.1]: [2020-05-26 22:52:11 +0000] [4] [INFO] Shutting down: Master
+2020-05-26T22:52:11.540837+00:00 app[web.1]: [2020-05-26 22:52:11 +0000] [4] [INFO] Reason: Worker failed to boot.
+2020-05-26T22:52:11.641423+00:00 heroku[web.1]: State changed from up to crashed
+2020-05-26T22:52:11.438051+00:00 heroku[router]: at=error code=H13 desc="Connection closed without response" method=GET path="/" host=grub-geeks-stage.herokuapp.com request_id=6894f228-e7e8-4d91-b941-75199f5e6070 fwd="69.221.222.95" dyno=web.1 connect=1ms service=280ms status=503 bytes=0 protocol=https
+2020-05-26T22:53:12.823358+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/" host=grub-geeks-stage.herokuapp.com request_id=091d735e-b33e-40ee-9947-849741ce2165 fwd="69.221.222.95" dyno= connect= service= status=503 bytes= protocol=https
+2020-05-26T22:55:48.844782+00:00 heroku[web.1]: State changed from crashed to starting
